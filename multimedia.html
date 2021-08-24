@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Trabajo Practico</title>
+    <link rel="apple-touch-icon" sizes="57x57" href="imagenes/Icons/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="imagenes/Icons/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="imagenes/Icons/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="imagenes/Icons/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="imagenes/Icons/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="imagenes/Icons/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="imagenes/Icons/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="imagenes/Icons/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="imagenes/Icons/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="imagenes/Icons/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="imagenes/Icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="imagenes/Icons/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="imagenes/Icons/favicon-16x16.png">
+    <link rel="manifest" href="imagenes/Icons/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+  </head>
+
+  <body>
+  <nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
+    <div class="container aling-content-end">
+        <a class="navbar-brand" href="index.html"> 
+            <img src="imagenes/recursos/show.svg" width="55" alt="logo del sitio">
+        </a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="historia.html">Historia</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                     Personajes
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <a class="dropdown-item" href="principales.html">Principales</a>
+                      <a class="dropdown-item" href="secundarios.html">Secundarios</a>
+                      <div class="dropdown-divider"></div>
+                      <a class="dropdown-item" href="famosos.html">Invitados Especiales</a>
+                    </div>
+                  </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="multimedia.html">Multimedia</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="juego.html">Interactivo</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="creditos.html">Creditos</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<header id="Home" class="container-fluid">
+
+ 
+    <div class="row">
+        <div class="col-12">
+            <div class="my-2">  
+                <h1 class="h5 text-light"><span class="fa fa-music"></span>Smelly Cat</h1>
+                <button id="btnPlay"><span class="far fa-play-circle"></span></button>
+                <button id="btnPause"><span class="far fa-pause-circle"></span></button>
+                <button id="btnReset"> Inicio </button>
+               <script src="js/sound2.js"></script> 
+            </div> 
+            <img src="imagenes/secciones/multimedia.png" alt="seccion multimedia"  class="img-fluid pt-3">
+        </div>
+    </div>
+</header>
+
+<main class="text-light py-4">
+   
+    <section class="py-3 container">
+        <h2 class="font-weight-bold pt-2 pb-4">Imagenes</h2>
+
+        
+        <div id="Galeria" class="row">
+            <div class="col-12 col-md-6 col-lg-4 mb-5">
+                <a href="imagenes/galeria/imagen1.jpg" target="_blank">
+                    <img src="imagenes/galeria/imagen1.jpg" alt="friends1" class="img-fluid w-100">
+                </a>                   
+            </div>
+            <div class="col-12 col-md-6 col-lg-4 mb-5">
+                <a href="imagenes/galeria/imagen2.jpg" target="_blank">
+                    <img src="imagenes/galeria/imagen2.jpg" alt="friends2" class="img-fluid w-100">
+                </a>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4 mb-5">
+                <a href="imagenes/galeria/imagen3.jpg" target="_blank">
+                    <img src="imagenes/galeria/imagen3.jpg" alt="friends3" class="img-fluid w-100">
+                </a>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4 mb-5">
+                <a href="imagenes/galeria/imagen4.jpg" target="_blank">
+                    <img src="imagenes/galeria/imagen4.jpg" alt="friends4" class="img-fluid w-100">
+                </a>                   
+            </div>
+            <div class="col-12 col-md-6 col-lg-4 mb-5">
+                <a href="imagenes/galeria/imagen5.jpg" target="_blank">
+                    <img src="imagenes/galeria/imagen5.jpg" alt="friends5" class="img-fluid w-100">
+                </a>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4 mb-5">
+                <a href="imagenes/galeria/imagen6.jpg" target="_blank">
+                    <img src="imagenes/galeria/imagen6.jpg" alt="friends6" class="img-fluid w-100">
+                </a>
+            </div>
+                           
+        </div>
+
+        <aside class="py-2">
+            <h2 class="font-weight-bold p-4">Compilado de mejores escenas</h2>
+            <div class="container">
+                <div class="row ">
+                    <div class="col-lg-6 col-sm-10 my-2">
+                        <div class="embed-responsive embed-responsive-21by9">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/xHcPhdZBngw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-sm-10 my-2">
+                        <div class="embed-responsive embed-responsive-21by9">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/ggZkZK-9Pm4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>                        </div>
+                    </div>
+                    <div class="col-lg-6 col-sm-10 my-2">
+                        <div class="embed-responsive embed-responsive-21by9">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/O6Iiy_YOe4Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>                        </div>
+                    </div>
+                    <div class="col-lg-6 col-sm-10 my-2">
+                        <div class="embed-responsive embed-responsive-21by9">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/A9GyVeV1Yu8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>                        </div>
+                    </div>
+                    <div class="col-lg-6 col-sm-10 my-2">
+                        <div class="embed-responsive embed-responsive-21by9">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/P5TMcx0ofEc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>                        </div>
+                    </div>
+                    <div class="col-lg-6 col-sm-10 my-2">
+                        <div class="embed-responsive embed-responsive-21by9">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/eCoiFAKbL3I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-sm-10 my-2">
+                        <div class="embed-responsive embed-responsive-21by9">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/OmlJbkBltQg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>                        </div>
+                    </div>
+                </div>
+            </div>
+
+        
+    </section>
+
+
+</main>
+
+
+
+<footer class="container-fluid">
+    <div class="container">
+      <span class="text-muted">Hecho por Silvina Saucedo</span> -
+      <span class="text-muted">Materia: Aplicaciones Moviles </span> -
+      <span class="text-muted"><a href="https://github.com/silvyhs90"> Pagina Github </a></span> -
+    </div>
+  </footer>
+
+
+
+ 
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
