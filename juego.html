@@ -24,7 +24,6 @@
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
-    <script src="js/app.js"></script>
   </head>
 
   <body class="pb-3">
@@ -71,9 +70,7 @@
     </div>
 </nav>
 <header id="Home" class="container-fluid">
-
- 
-    <div class="row">
+  <div class="row">
         <div class="col-12">
             <img src="imagenes/secciones/juego.png" alt="seccion juego"  class="img-fluid pt-3">
         </div>
@@ -81,46 +78,62 @@
 </header>
 
 <main class="text-dark py-4 container">
- 
-    <div class="py-2"> 
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/M78QGVsfV94" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    </div>
-    <div class="quiz-container py-3">
-        <div class="quiz-header">
-            <h2>Pregunta</h2>
-            <ul>
-                <li>
-                    <input type="radio" id="a" name="answer">
-                    <label for="a">Pregunta</label>
-                </li>
-                <li>
-                    <input type="radio" id="b" name="answer">
-                    <label for="b">Pregunta</label>
-                </li>
-                <li>
-                    <input type="radio" id="c" name="answer">
-                    <label for="c">Pregunta</label>
-                </li>
-                <li>
-                    <input type="radio" id="d" name="answer">
-                    <label for="d">Pregunta</label>
-                </li>
-            </ul>
+    <div class="py-2 "> 
+        <div class="container">
+        <iframe width="560" height="350" class="img-fluid" src="https://www.youtube.com/embed/M78QGVsfV94" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
-       
-        
-        <button>Siguiente</button>
-    
-     
-    
-
     </div>
+    <div class="quiz-container my-3" id="quiz">
+        <div class="quiz-header">
+            <script src="js/app.js" defer></script>
+            <h2 id="question">Question text</h2>
+                <ul>
+                    <li>
+                        <input
+                            type="radio"
+                            id="a"
+                            name="answer"
+                            class="answer"
+                        />
+                        <label id="a_text" for="a">Question</label>
+                    </li>
+                    <li>
+                        <input
+                            type="radio"
+                            id="b"
+                            name="answer"
+                            class="answer"
+                        />
+                        <label id="b_text" for="b">Question</label>
+                    </li>
+                    <li>
+                        <input
+                            type="radio"
+                            id="c"
+                            name="answer"
+                            class="answer"
+                        />
+                        <label id="c_text" for="c">Question</label>
+                    </li>
+                    <li>
+                        <input
+                            type="radio"
+                            id="d"
+                            name="answer"
+                            class="answer"
+                        />
+                        <label id="d_text" for="d">Question</label>
+                    </li>
+                </ul>
+            </div>
+            <button class="button1" id="submit">Siguiente</button>
+        </div>
 </main>
 
 <footer class="container-fluid">
     <div class="container">
       <span class="text-muted">Hecho por Silvina Saucedo</span> -
-      <span class="text-muted">Materia: Aplicaciones Moviles </span> -
+      <span class="text-muted"><a href="https://portfolio-react-silvyhs90.vercel.app/"> Portfolio </a></span> -
       <span class="text-muted"><a href="https://github.com/silvyhs90"> Pagina Github </a></span> -
     </div>
   </footer>

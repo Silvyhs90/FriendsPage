@@ -1,11 +1,11 @@
-let questions = [
+const quizData = [
                 {
                     question:'¿Como se llama la hermana de Phoebe?',
                     a:'Ursula',
                     b:'Penelope',
                     c: 'Karen',
                     d:'Christy',
-                    correct: 'c'
+                    correct: 'a'
                 },
                 {
                     question:'¿Como se llaman la madre de Monica y Ross? ',
@@ -17,19 +17,19 @@ let questions = [
                 },
                 {
                     question:'¿Como se llama la cafeteria donde siempre se juntan los protagonistas?',
-                    a:'',
-                    b:'',
-                    c:'',
-                    d:'',
-                    correct:''
+                    a:'Central Park',
+                    b:'Central Perk',
+                    c:'Moe´s',
+                    d:'Kentucky',
+                    correct:'b'
                 },
                 {
                     question:'¿Como se llamaba el mono que tenia Ross?',
-                    a:'Central Park',
-                    b:'Central Perk',
-                    c:'Luigi´s',
-                    d:'Moe´s',
-                    correct:'b'
+                    a:'Marcel',
+                    b:'Toby',
+                    c:'Michel',
+                    d:'Monkey',
+                    correct:'a'
                 },
                 {
                     question:'¿Con quien se estuvo a punto de casar Rachel en el primer capitulo?',
@@ -73,7 +73,7 @@ let questions = [
                     correct:'a'
                 },
                 {
-                    question:'¿¿En que temporada se casaron Monica y Chandler  ',
+                    question:'¿En que temporada se casaron Monica y Chandler?',
                     a:'7',
                     b:'10',
                     c:'8',
@@ -82,11 +82,11 @@ let questions = [
                 },
                 {
                     question:'¿Cual es el segundo nombre de Chandler? ',
-                    a:'Murriel',
+                    a:'Muriel',
                     b:'Manny',
                     c:'Moe',
-                    d:'Muriel',
-                    correct:'d'
+                    d:'Munch',
+                    correct:'a'
                 },
                 {
                     question:'¿Quien fue el primer beso de Monica?',
@@ -121,177 +121,70 @@ let questions = [
                     correct:'d'
                 },
 
-],
+];
 
-question,answer,
-form=0, // preguntas hechas
-ok=0; // preguntas contestadas ok
+const quiz = document.getElementById("quiz");
+const answerEls = document.querySelectorAll(".answer");
+const questionEl = document.getElementById("question");
+const a_text = document.getElementById("a_text");
+const b_text = document.getElementById("b_text");
+const c_text = document.getElementById("c_text");
+const d_text = document.getElementById("d_text");
+const submitBtn = document.getElementById("submit");
 
-makeQuestion(); // funcion hacer preguntas
+let currentQuiz = 0;
+let score = 0;
 
-document.getElementById('but').addEventListener('click', function(){
-let entry = document.getElementById('dato').value;
+loadQuiz();
 
-  if (entry == '' || entry == null ) 
-    {
-        alert("ingrese una respuesta");
-        return;   
-    } 
+function loadQuiz() {
+    deselectAnswers();
 
-    if(entry.toLowerCase() == answer || entry.toUpperCase() == answer) 
-    {
-        ok++;
-    }
-    
-    if(form < 15)
-    {
-        makeQuestion();
-    }
-    else
-    {
-        showResult();
-    }
+    const currentQuizData = quizData[currentQuiz];
 
+    questionEl.innerText = currentQuizData.question;
+    a_text.innerText = currentQuizData.a;
+    b_text.innerText = currentQuizData.b;
+    c_text.innerText = currentQuizData.c;
+    d_text.innerText = currentQuizData.d;
+}
 
-});
+function getSelected() {
+    let answer = undefined;
 
+    answerEls.forEach((answerEl) => {
+        if (answerEl.checked) {
+            answer = answerEl.id;
+        }
+    });
 
+    return answer;
+}
 
-function makeQuestion()
-{
-    let aux;
+function deselectAnswers() {
+    answerEls.forEach((answerEl) => {
+        answerEl.checked = false;
+    });
+}
 
-    aux= questions.splice(AleatoryNumber(0,questions.length -1), 1);
-    question= aux[0][0];
-    answer = aux[0][1];
+submitBtn.addEventListener("click", () => {
+    // check to see the answer
+    const answer = getSelected();
 
-    document.getElementById('ques').innerHTML= question.fontcolor("pink").fontsize(25);
-    document.getElementById('dato').value='';
-    
-
-    form++;
-};
-
-function showPictureIncorrect()
-{
-    let image = new Image(); 
-    image.src = "imagenes/gifs/incorrecto.gif";
-    image.style.width='400px';
-    image.style.height = 'auto';
-    const juegoDiv = document.querySelector('.juego');
-    juegoDiv.appendChild(image);
-};
-
-function showPictureCorrect()
-{
-    let image = new Image(); 
-    image.src = "imagenes/gifs/imagen2.gif";
-    image.style.width='400px';
-    image.style.height = 'auto';
-    const juegoDiv = document.querySelector('.juego');
-    juegoDiv.appendChild(image);
-};
-
-function showResult()
-{
-    let result;
-   
-
-    switch(ok)
-    {
-        case 0:
-            result= "No acertase ninguna, hay que reveer la serie!!";
-            showPictureIncorrect();
-            alert(result);
-            break;
-        case 1:
-            result= "ACERTASTE 1/15 hay que reveer la serie!!";
-            showPictureIncorrect();
-            alert(result);
-            break;
-        case 2:
-            result= "ACERTASTE 2/15 hay que reveer la serie!!";
-            showPictureIncorrect();
-            alert(result);
-            break;
-        case 3:
-            result= "ACERTASTE 3/15 hay que reveer la serie!!";
-            showPictureIncorrect();
-            alert(result);
-            break;
-        case 4:
-            result= "ACERTASTE 4/15 hay que reveer la serie!!";
-            showPictureIncorrect();
-            alert(result);
-            break;
-        case 5:
-            result= "ACERTASTE 5/15 hay que reveer la serie!!";
-            showPictureIncorrect();
-            alert(result);
-            break;
-        case 6:
-            result= "ACERTASTE 6/15";
-            showPictureCorrect();
-            alert(result);
-            break;
-        case 7:
-            result= "ACERTASTE 7/15";
-            showPictureCorrect();
-            alert(result);
-            break;
-        case 8:
-            result= "ACERTASTE 8/15";
-            showPictureCorrect();
-            alert(result);
-            break;
-        case 9:
-            result= "ACERTASTE 9/15";
-            showPictureCorrect();
-            alert(result);
-            break;
-        case 10:
-            result= "ACERTASTE 10/15";
-            showPictureCorrect();
-            alert(result);
-            break;
-            case 11:
-            result= "ACERTASTE 11/15";
-            showPictureCorrect();
-            alert(result);
-            break;
-            case 12:
-            result= "ACERTASTE 12/15";
-            showPictureCorrect();
-            alert(result);
-            break;
-            case 13:
-            result= "ACERTASTE 13/15";
-            showPictureCorrect();
-            alert(result);
-            break;
-            case 14:
-            result= "ACERTASTE 14/15 CASI PERFECTO";
-            showPictureCorrect();
-            alert(result);
-            break;
-            case 15:
-            result= "Felicitaciones!! contestaste TODAS BIEN!";
-            showPictureCorrect();
-            alert(result);
-            break;    
-
-
+    if (answer) {
+        if (answer === quizData[currentQuiz].correct) {
+            score++;
         }
 
-    document.getElementById('resolution').innerHTML = result.bold().fontsize(25);
-       
-};
-
-
-function AleatoryNumber(min , max)
-{
-    return Math.floor(Math.random() * (max - min + 1) ) + min;
-};
-
-
-
+        currentQuiz++;
+        if (currentQuiz < quizData.length) {
+            loadQuiz();
+        } else {
+            quiz.innerHTML = `
+                <h2>Contestaste ${score}/${quizData.length} preguntas.</h2>
+                
+                <button onclick="location.reload()">Reiniciar</button>
+            `;
+        }
+    }
+});
