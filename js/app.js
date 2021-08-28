@@ -1,20 +1,128 @@
 let questions = [
-                ['¿Como se llama la hermana de Phoebe? ', 'ursula'],
-                ['¿Como se llaman la madre de Monica y Ross? ', 'judy'],
-                ['¿Como se llama la cafeteria donde siempre se juntan los protagonistas? ', 'central perk'],
-                ['¿Como se llamaba el mono que tenia Ross? ', 'marcel'],
-                ['¿Con quien se estuvo a punto de casar Rachel en el primer capitulo? ', 'barry'],
-                ['¿En que año (ej:1996) se estreno la serie? ', '1994'],
-                ['¿En que año fue la temporada final? ', '2003'],
-                ['¿Como se llama el esposo de Phoebe en la temporada final? ', 'mike'],
-                ['¿Cual es el nombre del hijo de Ross? ', 'ben'],
-                ['¿En que temporada se casaron Monica y Chandler ', '7'],
-                ['¿Cual es el segundo nombre de Chandler? ', 'muriel'],
-                ['¿Quien fue el primer beso de Monica? ', 'ross'],
-                ['¿Quien es Princesa Consuela Banana Hammock? ', 'phoebe'],
-                ['¿Cuantas hermanas tiene Joey? ', '7'],
-                ['¿En que temporada Rachel tiene a su hija?', '8']
+                {
+                    question:'¿Como se llama la hermana de Phoebe?',
+                    a:'Ursula',
+                    b:'Penelope',
+                    c: 'Karen',
+                    d:'Christy',
+                    correct: 'c'
+                },
+                {
+                    question:'¿Como se llaman la madre de Monica y Ross? ',
+                    a:'Judy',
+                    b:'Christine',
+                    c:'Lenny',
+                    d:'Susie',
+                    correct:'a'
+                },
+                {
+                    question:'¿Como se llama la cafeteria donde siempre se juntan los protagonistas?',
+                    a:'',
+                    b:'',
+                    c:'',
+                    d:'',
+                    correct:''
+                },
+                {
+                    question:'¿Como se llamaba el mono que tenia Ross?',
+                    a:'Central Park',
+                    b:'Central Perk',
+                    c:'Luigi´s',
+                    d:'Moe´s',
+                    correct:'b'
+                },
+                {
+                    question:'¿Con quien se estuvo a punto de casar Rachel en el primer capitulo?',
+                    a:'Barry',
+                    b:'Larry',
+                    c:'George',
+                    d:'Peter',
+                    correct:'a'
+                },
+                {
+                    question:'¿En que año (ej:1996) se estreno la serie? ',
+                    a:'1990',
+                    b:'1992',
+                    c:'1994',
+                    d:'1998',
+                    correct:'c'
+                },
+                {
+                    question:'¿En que año fue la temporada final? ',
+                    a:'2003',
+                    b:'2002',
+                    c:'2001',
+                    d:'2008',
+                    correct:'a'
+                },
+                {
+
+                    question:'¿Como se llama el esposo de Phoebe en la temporada final?',
+                    a:'Joey',
+                    b:'David',
+                    c:'Mike',
+                    d:'Sheldon',
+                    correct:'c'
+                },
+                {
+                    question:'¿Cual es el nombre del hijo de Ross? ',
+                    a:'Ben',
+                    b:'Clark',
+                    c:'Mark',
+                    d:'Toby',
+                    correct:'a'
+                },
+                {
+                    question:'¿¿En que temporada se casaron Monica y Chandler  ',
+                    a:'7',
+                    b:'10',
+                    c:'8',
+                    d:'5',
+                    correct:'a'
+                },
+                {
+                    question:'¿Cual es el segundo nombre de Chandler? ',
+                    a:'Murriel',
+                    b:'Manny',
+                    c:'Moe',
+                    d:'Muriel',
+                    correct:'d'
+                },
+                {
+                    question:'¿Quien fue el primer beso de Monica?',
+                    a:'Joey',
+                    b:'Chandler',
+                    c:'Gunther',
+                    d:'Ross',
+                    correct:'d'
+                },
+                {
+                    question:'¿Quien es Princesa Consuela Banana Hammock?',
+                    a:'Phoebe',
+                    b:'Amy',
+                    c:'Monica',
+                    d:'Rachel',
+                    correct:'a'
+                },
+                {
+                    question:'¿Cuantas hermanas tiene Joey?',
+                    a:'No tiene',
+                    b:'2',
+                    c:'7',
+                    d:'5',
+                    correct:'c'
+                },
+                {
+                    question:'¿En que temporada Rachel tiene a su hija?',
+                    a:'10',
+                    b:'6',
+                    c:'9',
+                    d:'8',
+                    correct:'d'
+                },
+
 ],
+
 question,answer,
 form=0, // preguntas hechas
 ok=0; // preguntas contestadas ok

@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/styles.css" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <title>Trabajo Practico</title>
+    <title>Interactivo</title>
     <link rel="apple-touch-icon" sizes="57x57" href="imagenes/Icons/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="imagenes/Icons/apple-icon-60x60.png">
     <link rel="apple-touch-icon" sizes="72x72" href="imagenes/Icons/apple-icon-72x72.png">
@@ -24,6 +24,7 @@
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
+    <script src="js/app.js"></script>
   </head>
 
   <body class="pb-3">
@@ -79,26 +80,41 @@
     </div>
 </header>
 
-<main class="text-light py-4 container">
+<main class="text-dark py-4 container">
  
     <div class="py-2"> 
         <iframe width="560" height="315" src="https://www.youtube.com/embed/M78QGVsfV94" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
-
-  
-    <div class="juego py-3">
-        <div class="container">
-         <h1 id="ques" class="text-light my-3"></h1>
+    <div class="quiz-container py-3">
+        <div class="quiz-header">
+            <h2>Pregunta</h2>
+            <ul>
+                <li>
+                    <input type="radio" id="a" name="answer">
+                    <label for="a">Pregunta</label>
+                </li>
+                <li>
+                    <input type="radio" id="b" name="answer">
+                    <label for="b">Pregunta</label>
+                </li>
+                <li>
+                    <input type="radio" id="c" name="answer">
+                    <label for="c">Pregunta</label>
+                </li>
+                <li>
+                    <input type="radio" id="d" name="answer">
+                    <label for="d">Pregunta</label>
+                </li>
+            </ul>
+        </div>
+       
         
-        <input type="text" id="dato" class="my-3 gameBoard">
-        <button id="but" class="border-dark my-5 bg-dark text-light"> Siguiente Pregunta </button>
-        <input type="button" value="Volver a jugar?" class="border-dark my-5 bg-dark text-light" onclick="location.reload()"/>
-        
-        <p id="resolution"></p>
-    </div>
-    </div>
+        <button>Siguiente</button>
+    
      
-    <script src="js/app.js"></script>
+    
+
+    </div>
 </main>
 
 <footer class="container-fluid">
